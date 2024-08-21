@@ -1,0 +1,23 @@
+#rolltype-buttons{
+    display: flex;
+}
+#rolltype-buttons .rolltype-button{
+    animation: gradient 15s ease infinite;
+}
+#rolltype-buttons .rolltype-button { filter:invert(0); }
+#rolltype-buttons .rolltype-button.publicroll.active{ background: linear-gradient(-45deg, #00a000, #008000, #004100); color: white; }
+#rolltype-buttons .rolltype-button.gmroll.active{ background: linear-gradient(-45deg, #ffff00, #c0c000, #818100); color: black; }
+#rolltype-buttons .rolltype-button.blindroll.active{background: linear-gradient(-45deg, #ffa500, #b37400, #6b4600); color: black; }
+#rolltype-buttons .rolltype-button.selfroll.active{background: linear-gradient(-45deg, #ff0000, #b60000, #8d0000);  color: white; }
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

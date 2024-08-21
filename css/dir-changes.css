@@ -1,0 +1,54 @@
+/*FoundryVTT Directory Changes*/
+body.zetas-dir-changes #actors li.folder > .folder-header,
+body.zetas-dir-changes #items li.folder > .folder-header,
+body.zetas-dir-changes #compendium li.folder > .folder-header,
+body.zetas-dir-changes #scenes li.folder > .folder-header,
+body.zetas-dir-changes #journal li.folder > .folder-header,
+body.zetas-dir-changes #tables li.folder > .folder-header,
+body.zetas-dir-changes #cards li.folder > .folder-header { padding: 0 6px; }
+body.zetas-dir-changes #actors .directory-item.actor,
+body.zetas-dir-changes #items .directory-item.item,
+body.zetas-dir-changes #journal .directory-item.journalentry,
+body.zetas-dir-changes #tables .directory-item.rolltable {
+    position: relative;
+    line-height: 24px;
+}
+body.zetas-dir-changes #scenes .directory-item.scene .document-name{
+    line-height: 24px;
+}
+body.zetas-dir-changes #scenes .directory-item.scene {
+    line-height: 30px;
+    height: 30px;
+    margin-bottom: 3px;
+}
+body.zetas-dir-changes #compendium .directory-item.compendium {
+    position: relative;
+    line-height: 24px;
+    height: unset;
+    flex-direction: row;
+    align-items: center;
+}
+body.zetas-dir-changes #actors .directory-item.actor .document-name,
+body.zetas-dir-changes #items .directory-item.item .document-name,
+body.zetas-dir-changes #tables .directory-item.rolltable .document-name { 
+    position: relative;
+    padding-top: 2px;
+    padding-left: 56px; 
+}
+body.zetas-dir-changes .compendium-sidebar .directory-item.compendium .compendium-name {
+    max-width: 70%;
+    white-space: normal;
+    margin-left: 1px;
+    margin-right: 0;
+    padding-top: 0;
+    text-align: left;
+    display: flex;
+}
+body.zetas-dir-changes #actors .directory-item.actor .thumbnail,
+body.zetas-dir-changes #items .directory-item.item .thumbnail,
+body.zetas-dir-changes #tables .directory-item.rolltable .thumbnail {
+    clip: rect(12px, 48px, 36px, 0);
+    position: absolute;
+    margin-top: -11px;
+    margin-bottom: -14px;
+}

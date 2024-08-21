@@ -1,0 +1,51 @@
+{
+    "id": "zetas-module-suite",
+    "title": "Zeta's Module Suite for DnD 5th Edition",
+    "description": "A simple collection of Zeta's Modules.",
+    "authors": [
+      {
+      "name": "ZeroXNoxus"
+      }
+      ],
+    "version": "0.0.1",
+    "compatibility": {
+      "minimum": "12",
+      "verified": "12",
+      "maximum": "12.99999"
+    },
+    "scripts": [
+      "/script/zetas-module-suite.js"
+    ],
+    "styles": [
+      "/css/dark-mode.css",
+      "/css/dir-changes.css",
+      "/css/smaller-chat.css",
+      "/css/rolltype-buttons.css",
+      "/css/module-support.css"
+    ],
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
+        }
+    ],
+    "relationships": {
+      "systems": [{
+        "id": "dnd5e",
+        "type": "system",
+        "manifest": "https://github.com/foundryvtt/dnd5e/releases/download/release-3.3.1/system.json",
+        "compatibility": {
+          "minimum": "3.0.1",
+          "verified": "3.3.1",
+          "maximum": "3.3.999999"
+        }
+      }]
+    },
+    "manifest": "https://github.com/ZeroXNoxus/zetas-module-suite/releases/download/latest/module.json",
+    "url": "https://github.com/ZeroXNoxus/zetas-module-suite",
+    "download": "https://github.com/ZeroXNoxus/zetas-module-suite/archive/refs/tags/latest.zip",
+    "readme": "https://github.com/ZeroXNoxus/zetas-module-suite/blob/latest/README.md",
+    "bugs": "https://github.com/ZeroXNoxus/zetas-module-suite/issues",
+    "changelog": "https://github.com/ZeroXNoxus/zetas-module-suite/releases"
+  }
