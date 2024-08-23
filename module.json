@@ -44,7 +44,7 @@
     },
     "manifest": "https://github.com/ZeroXNoxus/zetas-module-suite/releases/download/latest/module.json",
     "url": "https://github.com/ZeroXNoxus/zetas-module-suite",
-    "download": "https://github.com/ZeroXNoxus/zetas-module-suite/archive/refs/tags/latest.zip",
+    "download": "https://github.com/ZeroXNoxus/zetas-module-suite/releases/download/latest/module.zip",
     "readme": "https://github.com/ZeroXNoxus/zetas-module-suite/blob/latest/README.md",
     "bugs": "https://github.com/ZeroXNoxus/zetas-module-suite/issues",
     "changelog": "https://github.com/ZeroXNoxus/zetas-module-suite/releases"
