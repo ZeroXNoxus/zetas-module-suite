@@ -19,7 +19,7 @@ jobs:
 
             - name: Create Release
               id: create-release
-              uses: ncipollo/release-action@v1
+              uses: ncipollo/release-action@v3
               with:
                 allowUpdates: true
                 name: Release $[{ steps.get-version.outputs.version }]
