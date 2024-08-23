@@ -51,7 +51,7 @@ function buildSettings(){
     settings.push(createSetting({
         id: 'archive-delete-permission',
         scope: 'world',
-        type: Option,
+        type: Number,
         default: 3,
         requiresReload: true,
         choices: {
