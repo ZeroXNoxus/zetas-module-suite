@@ -115,10 +115,13 @@ function addButtons() {
                             '<button class="function-button export-log" name="export-log" data-tooltip="'+i18n('zetas-module-suite.zetas-rolltype-buttons.export')+'"><i class="fa-solid fa-floppy-disk fa-lg"></i></button>' +
                             '<button class="function-button chat-flush" name="chat-flush" data-tooltip="'+i18n('zetas-module-suite.zetas-rolltype-buttons.flush')+'"><i class="fa-solid fa-trash fa-lg"></i></button>' +
                         '</div>';
-    let type = $('#chat-controls select option:selected')[0].value;
+    let type = $('#chat-controls select option:selected')[0]?.value;
 
     $('#chat-controls').append(button_bank);
-    $('#rolltype-buttons .rolltype-button.'+ type).addClass('active');
+    if(type){
+        $('#rolltype-buttons .rolltype-button.'+ type).addClass('active');
+    };
+    
 };
 
 function switchRollType(type) {

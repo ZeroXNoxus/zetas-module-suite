@@ -10,6 +10,12 @@
 #rolltype-buttons .rolltype-button.blindroll.active{background: linear-gradient(-45deg, #ffa500, #b37400, #6b4600); color: black; }
 #rolltype-buttons .rolltype-button.selfroll.active{background: linear-gradient(-45deg, #ff0000, #b60000, #8d0000);  color: white; }
 
+#rolltype-buttons .v-seperator {
+    border-left: 2px solid #939393;
+    height: 100%;
+    margin: 0 0.2rem;
+}
+
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
