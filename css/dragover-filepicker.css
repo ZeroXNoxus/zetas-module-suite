@@ -1,0 +1,21 @@
+.dragover-modal {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.dragover-modal.active { display: block; }
+
+.dragover-modal .dragover-content {
+    background-color: var(--color-dark-6);
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    margin-top: 2.5%;
+    margin-left: 2.5%;
+    padding: 1.25%;
+    border: 1px dashed var(--color-warm-3);
+}
+
+.dragover-modal .dragover-content * { display: block; }
