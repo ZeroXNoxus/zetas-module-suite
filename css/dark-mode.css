@@ -52,7 +52,7 @@ body.theme-dark.zetas-dark-mode .app:not([data-sheet-module="tidy5e-sheet"]) tex
     border-color: var(--color-border-dark-5);
 }
 body.theme-dark.zetas-dark-mode #chat-form textarea {
-    background: url(../src/parchment-dark.jpg) repeat;
+    background: url(../img/parchment-dark.jpg) repeat;
     color: var(--color-text-dark-1);
 }
 body.theme-dark.zetas-dark-mode .prosemirror menu .pm-dropdown { background: #262737; }
@@ -91,10 +91,10 @@ body.theme-dark.zetas-dark-mode .dnd5e2 .pills .pill.transparent,
 body.theme-dark.zetas-dark-mode .dnd5e2 .pills .pill.pill-sm { color: #b1b1b1; }
 body.theme-dark.zetas-dark-mode .directory .directory-item { border-top: 1px solid var(--color-border-dark-5); }
 body.theme-dark.zetas-dark-mode .directory .directory-list > .directory-item:last-child { border-bottom: 1px solid var(--color-border-dark-4); }
-body.theme-dark.zetas-dark-mode .sheet.journal-entry .journal-entry-content { background: url(../src/parchment-dark.jpg) repeat; }
+body.theme-dark.zetas-dark-mode .sheet.journal-entry .journal-entry-content { background: url(../img/parchment-dark.jpg) repeat; }
 body.theme-dark.zetas-dark-mode .directory .directory-header .header-search input { background: rgba(0, 0, 10, 0.8); }
 body.theme-dark.zetas-dark-mode .window-app .window-content { 
-/*    background: url(../src/parchment-dark.jpg) repeat;*/
+/*    background: url(../img/parchment-dark.jpg) repeat;*/
     background: hsl(224deg 48.39% 6.08%);
     background: linear-gradient(to bottom right, #00081e, hsl(224deg 52.54% 5.78%));
 }
@@ -105,8 +105,8 @@ body.theme-dark.zetas-dark-mode.change-windows:not(.system-forbidden-lands) .win
 body.theme-dark.zetas-dark-mode .window-app:not(.monarch, .dnd5e2) .window-header a:not(.close, .document-id-link) { background: rgb(0 0 0 / 50%); }
 body.theme-dark.zetas-dark-mode .window-app:not(.monarch, .dnd5e2) .window-header a:not(.close, .document-id-link):hover { background: rgb(25 25 25 / 50%); }
 body.theme-dark.zetas-dark-mode :is(#tooltip, .locked-tooltip).dnd5e-tooltip {
-    background: url(../src/texture-gray1-dark.webp) no-repeat top left, 
-    url(../src/texture-gray2-dark.webp) no-repeat bottom right, 
+    background: url(../img/texture-gray1-dark.webp) no-repeat top left, 
+    url(../img/texture-gray2-dark.webp) no-repeat bottom right, 
     var(--dnd5e-color-parchment);
 }
 body.theme-dark.zetas-dark-mode #sidebar #chat-log .chat-message::before { opacity: 15%; }

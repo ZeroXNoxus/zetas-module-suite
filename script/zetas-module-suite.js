@@ -97,6 +97,7 @@ function registerSetting(setting){
 
 function hideSelect() {
     $('#chat-controls select').hide();
+    $('#chat-controls .control-buttons').hide();
     $('#rolltype-buttons').remove();
     if(game.user.role < game.settings.get(moduleName, 'archive-delete-permission')){
         $('#rolltype-buttons .v-seperator').remove();
