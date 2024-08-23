@@ -23,7 +23,7 @@ function buildSettings(){
         default: true,
         onChange: '',
         requiresReload: false,
-        choices: {},
+        choices: new {},
         ...overrides  // Override any default values with those provided in the overrides object
     });
 
