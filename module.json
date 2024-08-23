@@ -7,7 +7,7 @@
       "name": "ZeroXNoxus"
       }
       ],
-    "version": "0.0.2",
+    "version": "0.0.1",
     "compatibility": {
       "minimum": "12",
       "verified": "12",
@@ -42,10 +42,10 @@
         }
       }]
     },
-    "manifest": "https://github.com/ZeroXNoxus/zetas-module-suite/releases/download/latest/module.json",
+    "manifest": "https://github.com/ZeroXNoxus/zetas-module-suite/releases/download/0.0.1/module.json",
     "url": "https://github.com/ZeroXNoxus/zetas-module-suite",
-    "download": "https://github.com/ZeroXNoxus/zetas-module-suite/releases/download/latest/module.zip",
-    "readme": "https://github.com/ZeroXNoxus/zetas-module-suite/blob/latest/README.md",
+    "download": "https://github.com/ZeroXNoxus/zetas-module-suite/releases/download/0.0.1/module.zip",
+    "readme": "https://github.com/ZeroXNoxus/zetas-module-suite/blob/0.0.1/README.md",
     "bugs": "https://github.com/ZeroXNoxus/zetas-module-suite/issues",
     "changelog": "https://github.com/ZeroXNoxus/zetas-module-suite/releases"
   }
