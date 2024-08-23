@@ -17,7 +17,7 @@ jobs:
             - name: Get Version
               shell: bash
               id: get-version
-              run: echo "version=$(node ./.github/workflows/get-version.js)" >> $GITHUB_OUTPUT #echo "::set-output name=version::$(node ./.github/workflows/get-version.js)"
+              run: echo "::set-output name=version::$(node ./.github/workflows/get-version.js)" #echo "version=$(node ./.github/workflows/get-version.js)" >> $GITHUB_OUTPUT
 
             - name: Create Release
               id: create-release
