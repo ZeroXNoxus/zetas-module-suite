@@ -19,5 +19,8 @@
     "zetas-module-suite.zetas-rolltype-buttons.blindroll":"Roll blindly",
     "zetas-module-suite.zetas-rolltype-buttons.selfroll":"Roll to yourself",
     "zetas-module-suite.zetas-rolltype-buttons.export":"Export Chat Log",
-    "zetas-module-suite.zetas-rolltype-buttons.flush":"Clear Chat Log"
+    "zetas-module-suite.zetas-rolltype-buttons.flush":"Clear Chat Log",
+
+    "zetas-module-suite.drag-over-filepicker.title":"Test Title",
+    "zetas-module-suite.drag-over-filepicker.hint":"Test Hint"
 }

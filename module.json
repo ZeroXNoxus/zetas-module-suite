@@ -19,6 +19,7 @@
     "styles": [
       "/css/dark-mode.css",
       "/css/dir-changes.css",
+      "/css/dragover-filepicker.css",
       "/css/smaller-chat.css",
       "/css/rolltype-buttons.css",
       "/css/module-support.css"

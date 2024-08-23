@@ -1,5 +1,11 @@
 const moduleName = 'zetas-module-suite';
 const settings = [];
+const mainSettings = [
+    'zetas-dark-mode',
+    'zetas-smaller-chat',
+    'zetas-dir-changes',
+    'zetas-rolltype-buttons'
+];
 
 const body = $('body.vtt');
 
@@ -153,9 +159,18 @@ Hooks.once('init', () => {
 });
 
 Hooks.on("renderSettingsConfig", () => {
+    
     for(let i = 0; i < settings.length; i++){
-        $('<div>').addClass('form-group group-header').html(i18n("zetas-module-suite." + settings[i] + ".title"))
-                  .insertBefore($('[data-settings-key="zetas-module-suite.' + settings[i] + '"]').parents('div.form-group:first'));
+        let found = false;
+        for(let x = 0; i < mainSettings.length; x++){
+            if(mainSettings[x] === settings[i].id){
+                found = true;
+                x = mainSettings.length;
+            }6
+        }
+        if(found){
+            $('<div>').addClass('form-group group-header').html(i18n("zetas-module-suite." + settings[i] + ".title")).insertBefore($('[data-settings-key="zetas-module-suite.' + settings[i] + '"]'));
+        }
     };
 });
 
@@ -166,5 +181,26 @@ Hooks.on('renderSidebarTab', () => {
         bindEventListeners();
         switchRollType(rollMode);
     }
+});
+
+Hooks.on('renderFilePicker', (app, html, data) => {
+    html.append("<div class='dragover-modal'><div class='dragover-content'>"+
+                    "<h4>"+ i18n("zetas-module-suite.drag-over-filepicker.title") +"</h4>"+
+                    "<i class='fa-solid fa-file-import fa-2xl'></i>"+
+                    "<p>"+ i18n("zetas-module-suite.drag-over-filepicker.hint") +"</p>"+
+                "</div></div>");
+
+    html.on('dragover', (ev) => {
+        ev.preventDefault();
+        $('.filepicker .dragover-modal').addClass('active');
+    });
+    html.on('dragleave', (ev) => {
+        ev.preventDefault();
+        $('.filepicker .dragover-modal').removeClass('active');
+    });
+    html.on('drop', (ev) => {
+        ev.preventDefault();
+        $('.filepicker .dragover-modal').removeClass('active');
+    });
 });
 /************************************* Hook Declaration: END *************************************/
