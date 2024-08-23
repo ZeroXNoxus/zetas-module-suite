@@ -2,17 +2,27 @@
     "zetas-module-suite.zetas-dark-mode.title":"Zeta's Drak Mode Settings",
     "zetas-module-suite.zetas-dark-mode.name": "Enable Dark Mode",
     "zetas-module-suite.zetas-dark-mode.hint": "Enable the dark mode from Zeta's Module Suite.",
+    
     "zetas-module-suite.zetas-smaller-chat.title":"Zeta's Smaller Chat Settings",
     "zetas-module-suite.zetas-smaller-chat.name": "Enable Smaller Chat",
     "zetas-module-suite.zetas-smaller-chat.hint": "Toggle the smaller chat display.",
+
     "zetas-module-suite.zetas-dir-changes.title":"Zeta's Directory Settings",
     "zetas-module-suite.zetas-dir-changes.name": "Enable Directory Changes",
     "zetas-module-suite.zetas-dir-changes.hint": "Enable this setting to make the right-hand sidetab more compact and modern.",
+
     "zetas-module-suite.zetas-rolltype-buttons.title": "Zeta's Rolltype Buttons",
     "zetas-module-suite.zetas-rolltype-buttons.name": "Enable Rolltype Buttons",
     "zetas-module-suite.zetas-rolltype-buttons.hint": "Enable this setting to display buttons instead of a dropdown for the rolltype selection.",
     "zetas-module-suite.zetas-rolltype-buttons.publicroll":"Roll publicly",
     "zetas-module-suite.zetas-rolltype-buttons.gmroll":"Roll to the GM",
     "zetas-module-suite.zetas-rolltype-buttons.blindroll":"Roll blindly",
-    "zetas-module-suite.zetas-rolltype-buttons.selfroll":"Roll to yourself"
+    "zetas-module-suite.zetas-rolltype-buttons.selfroll":"Roll to yourself",
+
+    "zetas-module-suite.archive-delete-permission.name":"Archive & Delete Chat-Log Permission",
+    "zetas-module-suite.archive-delete-permission.hint":"Define what players can archive or delete the chat-log via Rolltype Buttons (permissions have to be set correctly).",
+    "zetas-module-suite.archive-delete-permission.player":"Player",
+    "zetas-module-suite.archive-delete-permission.trusted":"Trusted Player",
+    "zetas-module-suite.archive-delete-permission.assist":"Assist DM",
+    "zetas-module-suite.archive-delete-permission.dm":"Dungeon Master"
 }
