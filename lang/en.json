@@ -18,11 +18,6 @@
     "zetas-module-suite.zetas-rolltype-buttons.gmroll":"Roll to the GM",
     "zetas-module-suite.zetas-rolltype-buttons.blindroll":"Roll blindly",
     "zetas-module-suite.zetas-rolltype-buttons.selfroll":"Roll to yourself",
-
-    "zetas-module-suite.archive-delete-permission.name":"Archive & Delete Chat-Log Permission",
-    "zetas-module-suite.archive-delete-permission.hint":"Define what players can archive or delete the chat-log via Rolltype Buttons (permissions have to be set correctly).",
-    "zetas-module-suite.archive-delete-permission.player":"Player",
-    "zetas-module-suite.archive-delete-permission.trusted":"Trusted Player",
-    "zetas-module-suite.archive-delete-permission.assist":"Assist DM",
-    "zetas-module-suite.archive-delete-permission.dm":"Dungeon Master"
+    "zetas-module-suite.zetas-rolltype-buttons.export":"Export Chat Log",
+    "zetas-module-suite.zetas-rolltype-buttons.flush":"Clear Chat Log"
 }

@@ -48,7 +48,7 @@ function buildSettings(){
         requiresReload: false
     }));
 
-    settings.push(createSetting({
+/*    settings.push(createSetting({
         id: 'archive-delete-permission',
         scope: 'world',
         type: Number,
@@ -60,7 +60,7 @@ function buildSettings(){
             3: i18n(moduleName + ".archive-delete-permission.assist"),
             4: i18n(moduleName + ".archive-delete-permission.dm")
         },
-    }));
+    }));*/
 };
 
 function registerSetting(setting){
@@ -99,7 +99,7 @@ function hideSelect() {
     $('#chat-controls select').hide();
     $('#chat-controls .control-buttons').hide();
     $('#rolltype-buttons').remove();
-    if(game.user.role < game.settings.get(moduleName, 'archive-delete-permission')){
+    if(game.user.role < 3){
         $('#rolltype-buttons .v-seperator').remove();
         $('#rolltype-buttons .function-button.export-log').remove();
         $('#rolltype-buttons .function-button.chat-flush').remove();
@@ -155,7 +155,7 @@ Hooks.once('init', () => {
 Hooks.on("renderSettingsConfig", () => {
     for(let i = 0; i < settings.length; i++){
         $('<div>').addClass('form-group group-header').html(i18n("zetas-module-suite." + settings[i] + ".title"))
-                  .insertBefore($('[name="zetas-module-suite.' + settings[i] + '"]').parents('div.form-group:first'));
+                  .insertBefore($('[data-settings-key="zetas-module-suite.' + settings[i] + '"]').parents('div.form-group:first'));
     };
 });
 
