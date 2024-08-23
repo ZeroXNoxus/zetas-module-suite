@@ -51,7 +51,7 @@ function buildSettings(){
     settings.push(createSetting({
         id: 'archive-delete-permission',
         scope: 'world',
-        type: Number,
+        type: Option,
         default: 3,
         requiresReload: true,
         choices: {
@@ -72,12 +72,13 @@ function registerSetting(setting){
     game.settings.register(moduleName, setting.id, {
         name: name,
         hint: hint,
-        scope: setting.scope, //client | world
+        scope: setting.scope,
         config: true,
         type: setting.type,
         default: setting.default,
         onChange: setting.onChange,
-        requiresReload: setting.requiresReload
+        requiresReload: setting.requiresReload,
+        choices: setting.choices
     });
 };
 
@@ -93,10 +94,10 @@ function hideSelect() {
 
 function addButtons() {
     const button_bank = '<div id="rolltype-buttons" class="rolltype-container">' +
-                            '<button class="rolltype-button publicroll" name="publicroll" data-tooltip="'+i18n(zetas-module-suite.zetas-rolltype-buttons.publicroll)+'"><i class="fa-solid fa-dice-d20 fa-lg"></i></button>' +
-                            '<button class="rolltype-button gmroll" name="gmroll" data-tooltip="'+i18n(zetas-module-suite.zetas-rolltype-buttons.gmroll)+'"><i class="fa-solid fa-user-secret fa-lg"></i></button>' +
-                            '<button class="rolltype-button blindroll" name="blindroll" data-tooltip="'+i18n(zetas-module-suite.zetas-rolltype-buttons.blindroll)+'"><i class="fa-solid fa-eye-low-vision fa-lg"></i></button>' +
-                            '<button class="rolltype-button selfroll" name="selfroll" data-tooltip="'+i18n(zetas-module-suite.zetas-rolltype-buttons.selfroll)+'"><i class="fa-solid fa-ghost fa-lg"></i></button>' +
+                            '<button class="rolltype-button publicroll" name="publicroll" data-tooltip="'+i18n('zetas-module-suite.zetas-rolltype-buttons.publicroll')+'"><i class="fa-solid fa-dice-d20 fa-lg"></i></button>' +
+                            '<button class="rolltype-button gmroll" name="gmroll" data-tooltip="'+i18n('zetas-module-suite.zetas-rolltype-buttons.gmroll')+'"><i class="fa-solid fa-user-secret fa-lg"></i></button>' +
+                            '<button class="rolltype-button blindroll" name="blindroll" data-tooltip="'+i18n('zetas-module-suite.zetas-rolltype-buttons.blindroll')+'"><i class="fa-solid fa-eye-low-vision fa-lg"></i></button>' +
+                            '<button class="rolltype-button selfroll" name="selfroll" data-tooltip="'+i18n('zetas-module-suite.zetas-rolltype-buttons.selfroll')+'"><i class="fa-solid fa-ghost fa-lg"></i></button>' +
                         '</div>';
     let type = $('#chat-controls select option:selected')[0].value;
 
@@ -138,7 +139,7 @@ Hooks.on("renderSettingsConfig", () => {
     };
 });
 
-Hooks.on('renderSidebarTab', function(){
+Hooks.on('renderSidebarTab', () => {
     if(body.hasClass('zetas-rolltype-buttons')){
         hideSelect();
         addButtons();
