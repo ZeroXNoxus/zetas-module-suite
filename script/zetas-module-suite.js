@@ -23,6 +23,7 @@ function buildSettings(){
         default: true,
         onChange: '',
         requiresReload: false,
+        choices: {},
         ...overrides  // Override any default values with those provided in the overrides object
     });
 
@@ -45,6 +46,20 @@ function buildSettings(){
         id: 'zetas-rolltype-buttons',
         onChange: val => changeMode(val, 'zetas-rolltype-buttons'),
         requiresReload: false
+    }));
+
+    settings.push(createSetting({
+        id: 'archive-delete-permission',
+        scope: 'world',
+        type: Number,
+        default: 3,
+        requiresReload: true,
+        choices: {
+            1: i18n(moduleName + ".archive-delete-permission.player"),
+            2: i18n(moduleName + ".archive-delete-permission.trusted"),
+            3: i18n(moduleName + ".archive-delete-permission.assist"),
+            4: i18n(moduleName + ".archive-delete-permission.dm")
+        },
     }));
 };
 
@@ -69,6 +84,11 @@ function registerSetting(setting){
 function hideSelect() {
     $('#chat-controls select').hide();
     $('#rolltype-buttons').remove();
+    if(game.user.role < game.settings.get(moduleName, 'archive-delete-permission')){
+        $('#rolltype-buttons .v-seperator').remove();
+        $('#rolltype-buttons .function-button.export-log').remove();
+        $('#rolltype-buttons .function-button.chat-flush').remove();
+    }
 };
 
 function addButtons() {
