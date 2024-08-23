@@ -23,7 +23,7 @@ function buildSettings(){
         default: true,
         onChange: '',
         requiresReload: false,
-        choices: new {},
+        choices: {},
         ...overrides  // Override any default values with those provided in the overrides object
     });
 
@@ -69,7 +69,6 @@ function registerSetting(setting){
     let name = i18n(prefix + ".name");
     let hint = i18n(prefix + ".hint");
 
-    if(setting.choices){
         game.settings.register(moduleName, setting.id, {
             name: name,
             hint: hint,
@@ -79,20 +78,8 @@ function registerSetting(setting){
             default: setting.default,
             onChange: setting.onChange,
             requiresReload: setting.requiresReload,
-            choices: setting.choices
+            choices: new setting.choices
         });
-    } else {
-        game.settings.register(moduleName, setting.id, {
-            name: name,
-            hint: hint,
-            scope: setting.scope,
-            config: true,
-            type: setting.type,
-            default: setting.default,
-            onChange: setting.onChange,
-            requiresReload: setting.requiresReload
-        });
-    }
 };
 
 function hideSelect() {
