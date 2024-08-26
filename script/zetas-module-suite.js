@@ -54,17 +54,23 @@ function buildSettings(){
         requiresReload: false
     }));
 
+    settings.push(createSetting({
+        id: 'custom-description-button-toggle',
+        scope: 'client',
+        requiresReload: false
+    }));
+
 /*    settings.push(createSetting({
-        id: 'archive-delete-permission',
-        scope: 'world',
+        id: 'custom-description-button',
+        scope: 'client',
         type: Number,
-        default: 3,
+        default: 1,
         requiresReload: true,
         choices: {
-            1: i18n(moduleName + ".archive-delete-permission.player"),
-            2: i18n(moduleName + ".archive-delete-permission.trusted"),
-            3: i18n(moduleName + ".archive-delete-permission.assist"),
-            4: i18n(moduleName + ".archive-delete-permission.dm")
+            1: i18n(moduleName + ".custom-description-button.wheeldown"),
+            2: i18n(moduleName + ".custom-description-button.ikey"),
+            3: i18n(moduleName + ".custom-description-button.assist"),
+            4: i18n(moduleName + ".custom-description-button.dm")
         },
     }));*/
 };
@@ -139,6 +145,16 @@ function switchRollType(type) {
     localStorage.setItem('core.rollMode', type);
     rollMode = localStorage.getItem('core.rollMode');
 };
+
+function betterItemEvents(sheet){
+    if(game.settings.get(moduleName, 'custom-description-button-toggle')){
+        sheet.find('a[data-toggle-description]').hide();
+        sheet.find('.item-row .item-name.item-action').on('auxclick', (ev) => {
+            ev.stopPropagation();
+            $(ev.originalEvent.currentTarget).siblings().find('a[data-toggle-description]').click();
+        });
+    }
+}
 
 function bindEventListeners() {
     $('#rolltype-buttons .rolltype-button').on('click', function(e){
@@ -253,5 +269,12 @@ Hooks.on('renderFilePicker', (app, html, data) => {
         $('.filepicker .dragover-modal i').addClass('fa-file-import');
         $('.filepicker .dragover-modal i').removeClass('fa-triangle-exclamation');
     });
+});
+
+Hooks.on('renderActorSheet5eCharacter2', (app, html, data) => {
+    betterItemEvents(html); 
+});
+Hooks.on('renderActorSheet5eNPC2', (app, html, data) => {
+    betterItemEvents(html); 
 });
 /************************************* Hook Declaration: END *************************************/

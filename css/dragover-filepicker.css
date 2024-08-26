@@ -63,7 +63,7 @@
 }
 .dragover-modal .dragover-content i.fa-triangle-exclamation{ 
     color: var(--color-level-error);
-    animation: horizontal-shaking 0.25s 0.1s reverse;
+    animation: horizontal-shaking-inverted 0.25s 0.1s;
 }
 
 @keyframes horizontal-shaking {
@@ -71,5 +71,13 @@
     25% { transform: translateX(5px); }
     50% { transform: translateX(-5px); }
     75% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes horizontal-shaking-inverted {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
     100% { transform: translateX(0); }
 }

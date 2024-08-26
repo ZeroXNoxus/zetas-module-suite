@@ -24,5 +24,8 @@
     "zetas-module-suite.drag-over-filepicker.title":"Drop File Here",
     "zetas-module-suite.drag-over-filepicker.hint":"Uploads supported file type to current directory.",
     "zetas-module-suite.drag-over-filepicker.addition":"Supported file types: .apng, .avif, .bmp, .gif, .jpg, .jpeg, .png, .svg, .tiff, .webp",
-    "zetas-module-suite.drag-over-filepicker.error":"Dragged file is not supported!"
+    "zetas-module-suite.drag-over-filepicker.error":"Dragged file is not supported!",
+
+    "zetas-module-suite.custom-description-button-toggle.title":"Enable Description Toggle",
+    "zetas-module-suite.custom-description-button-toggle.hint":"Replaces the description button on items with a mouse wheel click on the item name."
 }
