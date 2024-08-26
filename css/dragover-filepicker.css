@@ -1,21 +1,75 @@
 .dragover-modal {
-    display: none;
+    opacity: 0;
     position: absolute;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    transition: opacity 0.1s ease-in-out;
 }
-.dragover-modal.active { display: block; }
+.dragover-modal.active {
+    opacity: 1;
+    pointer-events: none;
+    transition: opacity 0.1s ease-in-out;
+}
 
 .dragover-modal .dragover-content {
-    background-color: var(--color-dark-6);
+    background: hsl(224deg 48.39% 6.08%);
+    background: linear-gradient(to bottom right, #00081e, hsl(224deg 52.54% 5.78%));
     position: absolute;
     width: 95%;
     height: 95%;
-    margin-top: 2.5%;
-    margin-left: 2.5%;
-    padding: 1.25%;
-    border: 1px dashed var(--color-warm-3);
+    margin: 2.5%;
+    border: 6px dashed var(--color-warm-2);
+    border-radius: 16px;
+    align-content: center;
 }
 
-.dragover-modal .dragover-content * { display: block; }
+.dragover-modal .dragover-content * {
+    display: block;
+    text-align: center;
+    margin: auto;
+    font-size: xx-large;
+}
+
+.dragover-modal .dragover-content h4 {
+    font-weight: bolder;
+}
+
+.dragover-modal .dragover-content p.secondary {
+    font-style: italic;
+    font-size: 20px;
+    color: var(--color-text-light-6);
+}
+
+.dragover-modal .dragover-content p.error {
+    opacity: 0;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--color-level-error);
+}
+.dragover-modal .dragover-content p.error.active { 
+    opacity: 1;
+    animation: horizontal-shaking 0.25s 0.1s;
+    transition: opacitiy 0.1s 0.1s;
+}
+
+.dragover-modal .dragover-content i {
+    height: 100px;
+    font-size: 80px;
+    line-height: normal;
+    align-content: center;
+    color: var(--color-warm-2);
+}
+.dragover-modal .dragover-content i.fa-triangle-exclamation{ 
+    color: var(--color-level-error);
+    animation: horizontal-shaking 0.25s 0.1s reverse;
+}
+
+@keyframes horizontal-shaking {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(5px); }
+    50% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
