@@ -4,7 +4,8 @@ const mainSettings = [
     'zetas-dark-mode',
     'zetas-smaller-chat',
     'zetas-dir-changes',
-    'zetas-rolltype-buttons'
+    'zetas-rolltype-buttons',
+    'zetas-mobile-sheets'
 ];
 
 const body = $('body.vtt');
@@ -60,6 +61,19 @@ function buildSettings(){
         requiresReload: false
     }));
 
+    settings.push(createSetting({
+        id: 'zetas-mobile-sheets',
+        scope: 'world',
+        requiresReload: true
+    }));
+
+    settings.push(createSetting({
+        id: 'zetas-mobile-sheets-user',
+        scope: 'world',
+        default: false,
+        requiresReload: false
+    }));
+
 /*    settings.push(createSetting({
         id: 'custom-description-button',
         scope: 'client',
@@ -93,16 +107,36 @@ function registerSetting(setting){
                 choices: setting.choices
             });
         } else {
-            game.settings.register(moduleName, setting.id, {
-                name: name,
-                hint: hint,
-                scope: setting.scope,
-                config: true,
-                type: setting.type,
-                default: setting.default,
-                onChange: setting.onChange,
-                requiresReload: setting.requiresReload
-            });
+            if(setting.id === "zetas-mobile-sheets-user"){
+                if(game.settings.get(moduleName, 'zetas-mobile-sheets')){
+                    let users = game.users;
+                    users.forEach((user) => {
+                        if(user.role < 3){
+                            setting.id = setting.id + '.' + user._id;
+                            game.settings.register(moduleName, setting.id, {
+                                name: user.name,
+                                scope: setting.scope,
+                                config: true,
+                                type: setting.type,
+                                default: setting.default,
+                                onChange: setting.onChange,
+                                requiresReload: setting.requiresReload
+                            });
+                        } 
+                    });
+                }
+            } else {
+                game.settings.register(moduleName, setting.id, {
+                    name: name,
+                    hint: hint,
+                    scope: setting.scope,
+                    config: true,
+                    type: setting.type,
+                    default: setting.default,
+                    onChange: setting.onChange,
+                    requiresReload: setting.requiresReload
+                });
+            }
         }
         
 };
@@ -156,7 +190,7 @@ function betterItemEvents(sheet){
     }
 }
 
-function bindEventListeners() {
+function bindRollTypeEvent() {
     $('#rolltype-buttons .rolltype-button').on('click', function(e){
         switchRollType(this.name);
     });
@@ -172,7 +206,77 @@ Hooks.once('init', () => {
         changeMode(game.settings.get(moduleName, settings[i].id), settings[i].id);
     }
     rollMode = localStorage.getItem('core.rollMode');
+    
+    if(game.settings.get(moduleName, 'zetas-mobile-sheets')){
+        handleMobileSheetDialog(game.user._id);
+    }
 });
+
+async function handleMobileSheetDialog(uid){
+    if(game.settings.get(moduleName + '.zetas-mobile-sheets-user.' + uid) &&
+       localStorage.getItem('zetas-mobile-sheets.dont-ask-again') === false){
+        const result = await showConfirmDialog();
+        if(result.confirmed){
+            localStorage.setItem('zetas-mobile-sheets.choice', resolve.mobileChoice);
+            localStorage.setItem('zetas-mobile-sheets.dont-ask-again', resolve.dontAskAgain);
+            if(resolve.mobileChoice){
+                game.settings.set('core', 'noCanvas', true);
+                location.reload();
+            }
+        }
+    }
+    if(localStorage.getItem('zetas-mobile-sheets.choice') === true){
+        handleMobileSheets();
+    }
+}
+
+function showConfirmDialog() {
+    return new Promise((resolve) => {
+        const dialog = '<div id="zetasConfirmDialog" class="dialog-overlay" style="display: none;">'+
+                            '<div class="dialog">'+
+                                '<h3>' + i18n(moduleName + ".zetas-mobile-sheets.dialog-title") + '</h3>'+
+                                '<div><label><input type="checkbox" id="mobile-choice"> ' + i18n(moduleName + ".zetas-mobile-sheets.choice") + '</label></div>'+
+                                '<div><label><input type="checkbox" id="dont-ask-again"> ' + i18n(moduleName + ".zetas-mobile-sheets.dont-ask-again") + '</label></div>'+
+                                '<div>'+
+                                    '<button id="confirmBtn"><i class="fa-solid fa-check"></i> ' + i18n(moduleName + ".zetas-mobile-sheets.confirm") + '</button>'+
+                                    '<button id="closeBtn"><i class="fa-solid fa-xmark"></i> ' + i18n(moduleName + ".zetas-mobile-sheets.close") + '</button>'+
+                                '</div>'+
+                            '</div>'+
+                        '</div>';
+        $(body).append(dialog);
+        const confirmDialog = document.getElementById('zetasConfirmDialog');
+        const confirmBtn = document.getElementById('confirmBtn');
+        const closeBtn = document.getElementById('closeBtn');
+        
+        confirmDialog.style.display = 'flex';
+
+        confirmBtn.onclick = () => {
+            const mobileChoice = document.getElementById('mobile-choice').checked;
+            const dontAskAgain = document.getElementById('dont-ask-again').checked;
+            confirmDialog.style.display = 'none';
+            resolve({ confirmed: true, mobileChoice, dontAskAgain });
+        };
+        closeBtn.onclick = () => {
+            confirmDialog.style.display = 'none';
+            resolve({ confirmed: false });
+        };
+    });
+}
+
+function handleMobileSheets(){
+    //Open Assigned Character Sheet as Mobile Sheet
+    Hooks.on('renderZetasMobileSheet', () => {
+        const actor = game.user.character;
+        renderZetasMobileSheet(actor);
+    });
+    Hooks.call('renderZetasMobileSheet');
+}
+
+function renderZetasMobileSheet(actor){
+    const sheet = "<div></div>";
+
+    $(body).append(sheet);
+}
 
 Hooks.on("renderSettingsConfig", () => {
     
@@ -194,7 +298,7 @@ Hooks.on('renderSidebarTab', () => {
     if(body.hasClass('zetas-rolltype-buttons')){
         hideSelect();
         addButtons();
-        bindEventListeners();
+        bindRollTypeEvent();
         switchRollType(rollMode);
     }
 });
