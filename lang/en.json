@@ -27,5 +27,13 @@
     "zetas-module-suite.drag-over-filepicker.error":"Dragged file is not supported!",
 
     "zetas-module-suite.custom-description-button-toggle.title":"Enable Description Toggle",
-    "zetas-module-suite.custom-description-button-toggle.hint":"Replaces the description button on items with a mouse wheel click on the item name."
+    "zetas-module-suite.custom-description-button-toggle.hint":"Replaces the description button on items with a mouse wheel click on the item name.",
+
+    "zetas-module-suite.zetas-mobile-sheets.title":"Enable Mobile Sheets",
+    "zetas-module-suite.zetas-mobile-sheets.hint":"This enables a character sheet for mobile devices.",
+    "zetas-module-suite.zetas-mobile-sheets.dialog-title":"Zeta's Mobile Sheets",
+    "zetas-module-suite.zetas-mobile-sheets.choice":"Enable mobile sheet display",
+    "zetas-module-suite.zetas-mobile-sheets.dont-ask-again":"Don't ask again",
+    "zetas-module-suite.zetas-mobile-sheets.confirm":"Confirm",
+    "zetas-module-suite.zetas-mobile-sheets.close":"Close"
 }
