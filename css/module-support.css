@@ -50,7 +50,8 @@ body.theme-dark.zetas-dark-mode .tidy5e-sheet .editor {
     color: var(--t5e-primary-font-color);
 }
 body.theme-dark.zetas-dark-mode .tidy5e-sheet .editor a.inline-roll, 
-body.theme-dark.zetas-dark-mode .tidy5e-sheet .editor a.content-link { background: var(--t5e-content-entity-link-background); }
+body.theme-dark.zetas-dark-mode .tidy5e-sheet .editor a.content-link, 
+body.theme-dark.zetas-dark-mode .tidy5e-sheet .window-content a { background: var(--t5e-content-entity-link-background); }
 
 body.theme-dark.zetas-dark-mode .awesomplete > ul {
     background: hsl(224deg 48.39% 6.08%);
