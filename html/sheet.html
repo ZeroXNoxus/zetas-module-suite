@@ -1,0 +1,68 @@
+<style></style>
+<div id="zetasMobileSheet">
+    <div id="mobileContent" class="mobile-col">
+        <div id="mobileHeader" class="mobile-col">
+            <div id="mobileHeaderContent" class="mobile-row">
+                <div id="armor-class">
+                    <div class="label"><i class="fa-solid fa-shield"></i> ${armorClassLabel}</div>
+                    <div class="value">${armorClass}</div>
+                </div>
+                <div id="initiative">
+                    <div class="label"><i class="fa-solid fa-wind"></i> ${initiativeLabel}</div>
+                    <div class="value">${initiative}</div>
+                </div>
+                <div id="image">
+                    <img class="character-image" src="${imgPath}" />
+                </div>
+                <div id="health">
+                    <div id="hitpoints">
+                        <label class="label"><i class="fa-solid fa-heart"></i> ${hitpointLabel}</label>
+                        <div class="mobile-row">
+                            <label id="current"><input name="curVal" type="number" value="${currentHP}"></input></label> /
+                            <label id="max">${maxHP}</label>
+                        </div>
+                    </div>
+                    <div id="temp"><input name="tmpVal" type="number" value="${tempHP}"></input></div>
+                </div>
+            </div>
+            <div id="mobileHeaderNav" class="mobile-row">
+                <button class="nav-button" name="details"><i class="fa-solid fa-gear"></i> ${btnDetails}</button>
+                <button class="nav-button" name="inventory"><i class="fa-solid fa-box-open"></i> ${btnInventory}</button>
+                <button class="nav-button" name="features"><i class="fa-solid fa-list"></i> ${btnFeatures}</button>
+                <button class="nav-button" name="spells"><i class="fa-solid fa-book"></i> ${btnSpells}</button>
+                <button class="nav-button" name="effects"><i class="fa-solid fa-bolt-lightning"></i> ${btnEffects}</button>
+                <button class="nav-button" name="biography"><i class="fa-solid fa-feather"></i> ${btnBiography}</button>
+            </div>
+        </div>
+        <div id="mobileMain">
+            ${mobileMain}
+        </div>
+        <div id="mobileFooter">
+            ${mobileFooter}
+        </div>
+    </div>
+</div>
+
+<div>
+<!--
+    ${armorClassLabel}
+    ${armorClass}
+    ${initiativeLabel}
+    ${initiative}
+    ${imgPath}
+    ${hitpointLabel}
+    ${currentHP}
+    ${maxHP}
+    ${tempHP}
+
+    ${btnDetails}
+    ${btnInventory}
+    ${btnFeatures}
+    ${btnSpells}
+    ${btnEffects}
+    ${btnBiography}
+
+    ${mobileMain}
+    ${mobileFooter}
+-->
+</div>

@@ -24,3 +24,44 @@
     max-width: 45%;
 }
 #zetasConfirmDialog .dialog button#confirmBtn { background-color: var(--color-level-success-bg); }
+
+#zetasMobileSheet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#zetasMobileSheet #mobileContent{
+    width: 95vw;
+}
+#zetasMobileSheet .mobile-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-flow: row;
+    row-gap: 1vw;
+}
+#zetasMobileSheet .mobile-col{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+}
+#zetasMobileSheet .character-image{
+    height: 8vw;
+    object-fit: contain;
+    margin: auto;
+}
+#zetasMobileSheet #mobileHeaderContent .label,
+#zetasMobileSheet #mobileHeaderContent .value{
+    height: 50%;
+    align-content: center;
+    text-align: center;
+}
+#zetasMobileSheet #mobileHeaderContent>*{
+    min-width: 20vw;
+}
+#zetasMobileSheet #mobileHeaderContent #image{
+    display: flex;
+}
+#zetasMobileSheet #mobileHeaderNav .nav-button{
+    padding: 1vw;
+}
