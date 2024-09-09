@@ -46,7 +46,7 @@ function buildSettings(){
         requiresReload: false
     }));
 
-    settings.push(createSetting({
+/*    settings.push(createSetting({
         id: 'zetas-mobile-sheets',
         scope: 'world',
         requiresReload: true
@@ -57,7 +57,7 @@ function buildSettings(){
         scope: 'world',
         default: false,
         requiresReload: false
-    }));
+    }));*/
 
 /*    settings.push(createSetting({
         id: 'custom-description-button',
