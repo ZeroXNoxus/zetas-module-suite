@@ -3,8 +3,7 @@ const mainSettings = [
     'zetas-dark-mode',
     'zetas-smaller-chat',
     'zetas-dir-changes',
-    'zetas-rolltype-buttons',
-    'zetas-mobile-sheets'
+    'zetas-rolltype-buttons'
 ];
 
 function buildSettings(){
