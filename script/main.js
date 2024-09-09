@@ -1,10 +1,4 @@
 const moduleName = 'zetas-module-suite';
-const funcNames = [
-    initDragoverFilepicker,
-    initRolltypeButtons,
-    initSettings,
-    initMobileSheet
-];
 const body = $('body.vtt');
 
 /********************************** Function Declaration: START **********************************/
@@ -25,9 +19,10 @@ Hooks.once('init', () => {
 });
 
 function initialization(){
-    for(let i = 0; i < funcNames.length; i++){
-        (window.funcNames[i]) ? funcNames[i]() : console.warn('Function "'+ funcNames[i] +'" not found.') ;
-    }
+    initDragoverFilepicker();
+    initRolltypeButtons();
+    initSettings();
+    initMobileSheet();
 
     Hooks.on('renderActorSheet5eCharacter2', (app, html, data) => {
         betterItemEvents(html); 
