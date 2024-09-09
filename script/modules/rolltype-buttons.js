@@ -46,7 +46,7 @@ function hideSelect() {
     }
 };
 
-export function initRolltypeButtons(){
+function initRolltypeButtons(){
     if(body.hasClass('zetas-rolltype-buttons')){
         Hooks.on('renderSidebarTab', () => {
                 hideSelect();

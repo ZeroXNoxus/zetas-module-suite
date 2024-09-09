@@ -126,7 +126,7 @@ function registerSetting(setting){
     }
 };
 
-export function initSettings(){
+function initSettings(){
     buildSettings();
 
     for(let i = 0; i < settings.length; i++){

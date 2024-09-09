@@ -1,4 +1,4 @@
-export function initDragoverFilepicker(){
+function initDragoverFilepicker(){
     Hooks.on('renderFilePicker', (app, html, data) => {
         const supportedFileTypes = [ "apng", "avif", "bmp", "jpg", "gif", "jpeg", "png", "svg", "tiff", "webp" ];
         let supported = false;

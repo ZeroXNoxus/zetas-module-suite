@@ -69,7 +69,7 @@ function renderZetasMobileSheet(actor){
     $(body).append(sheet);
 }
 
-export function initMobileSheet(){
+function initMobileSheet(){
     if(game.settings.get(moduleName, 'zetas-mobile-sheets')){
         handleMobileSheetDialog(game.user._id);
     }
