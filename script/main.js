@@ -28,7 +28,7 @@ function initialization(){
     initDragoverFilepicker();
     initRolltypeButtons();
     initSettings();
-    initMobileSheet();
+//    initMobileSheet();
 
     Hooks.on('renderActorSheet5eCharacter2', (app, html, data) => {
         betterItemEvents(html); 
