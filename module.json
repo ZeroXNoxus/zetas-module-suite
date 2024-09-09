@@ -13,6 +13,7 @@
       "verified": "12",
       "maximum": "12.99999"
     },
+    "type": "module",
     "scripts": [
       "/script/modules/dragover-filepicker.js",
       "/script/modules/rolltype-buttons.js",
