@@ -14,7 +14,7 @@
       "maximum": "12.99999"
     },
     "scripts": [
-      "/script/zetas-module-suite.js"
+      "/script/main.js"
     ],
     "styles": [
       "/css/dark-mode.css",
