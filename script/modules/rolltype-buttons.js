@@ -1,7 +1,4 @@
 let rollMode;
-
-const body = $('body.vtt');
-
 function addButtons() {
     const button_bank = '<div id="rolltype-buttons" class="rolltype-container">' +
                             '<button class="rolltype-button publicroll" name="publicroll" data-tooltip="'+i18n('zetas-module-suite.zetas-rolltype-buttons.publicroll')+'"><i class="fa-solid fa-dice-d20 fa-lg"></i></button>' +

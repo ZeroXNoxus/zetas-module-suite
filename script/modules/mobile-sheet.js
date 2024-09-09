@@ -1,7 +1,3 @@
-import { i18n } from '/utility.js';
-
-const body = $('body.vtt');
-
 async function handleMobileSheetDialog(uid){
     if(game.settings.get(moduleName + '.zetas-mobile-sheets-user.' + uid) &&
        localStorage.getItem('zetas-mobile-sheets.dont-ask-again') === false){

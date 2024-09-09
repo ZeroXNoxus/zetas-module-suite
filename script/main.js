@@ -5,6 +5,7 @@ const funcNames = [
     initSettings,
     initMobileSheet
 ];
+const body = $('body.vtt');
 
 /********************************** Function Declaration: START **********************************/
 function betterItemEvents(sheet){

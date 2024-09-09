@@ -1,5 +1,3 @@
-const body = $('body.vtt');
-
 function changeMode(val, name){
     (val == true && !body.hasClass(name)) ? body.addClass(name) : body.removeClass(name);
 }
