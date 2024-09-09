@@ -1,13 +1,3 @@
-const settings = require('/modules/settings.js');
-const dragoverFilepicker = require('/modules/dragover-filepicker.js');
-const rolltypeButtons = require('/modules/rolltype-buttons.js');
-const mobileSheet = require('/modules/mobile-sheet.js');
-
-//import { initSettings }           from '/modules/settings.js';
-//import { initDragoverFilepicker } from '/modules/dragover-filepicker.js';
-//import { initRolltypeButtons }    from '/modules/rolltype-buttons.js';
-//import { initMobileSheet }        from '/modules/mobile-sheet.js';
-
 const moduleName = 'zetas-module-suite';
 const funcNames = [
     initDragoverFilepicker,

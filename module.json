@@ -15,12 +15,12 @@
     },
     "type": "module",
     "scripts": [
-      "/script/modules/dragover-filepicker.mjs",
-      "/script/modules/rolltype-buttons.mjs",
-      "/script/modules/settings.mjs",
-      "/script/modules/smaller-chat.mjs",
-      "/script/modules/utility.mjs",
-      "/script/main.mjs"
+      "/script/modules/dragover-filepicker.js",
+      "/script/modules/rolltype-buttons.js",
+      "/script/modules/settings.js",
+      "/script/modules/smaller-chat.js",
+      "/script/modules/utility.js",
+      "/script/main.js"
     ],
     "styles": [
       "/css/dark-mode.css",

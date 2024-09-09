@@ -1,5 +1,3 @@
-import { changeMode } from '/utility.js';
-
 const settings = [];
 const mainSettings = [
     'zetas-dark-mode',
