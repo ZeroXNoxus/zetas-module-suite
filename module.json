@@ -7,7 +7,7 @@
       "name": "ZeroXNoxus"
       }
       ],
-    "version": "0.0.7",
+    "version": "0.0.8",
     "compatibility": {
       "minimum": "12",
       "verified": "12",
@@ -34,14 +34,14 @@
         {
             "lang": "en",
             "name": "English",
-            "path": "lang/en.mjson"
+            "path": "lang/en.json"
         }
     ],
     "relationships": {
       "systems": [{
         "id": "dnd5e",
         "type": "system",
-        "manifest": "https://github.com/foundryvtt/dnd5e/releases/download/release-3.3.1/system.mjson",
+        "manifest": "https://github.com/foundryvtt/dnd5e/releases/download/release-3.3.1/system.json",
         "compatibility": {
           "minimum": "3.0.1",
           "verified": "3.3.1",
@@ -49,9 +49,9 @@
         }
       }]
     },
-    "manifest": "https://github.com/ZeroXNoxus/zetas-module-suite/releases/download/0.0.7/module.mjson",
+    "manifest": "https://github.com/ZeroXNoxus/zetas-module-suite/releases/download/0.0.8/module.json",
     "url": "https://github.com/ZeroXNoxus/zetas-module-suite",
-    "download": "https://github.com/ZeroXNoxus/zetas-module-suite/releases/download/0.0.7/module.zip",
+    "download": "https://github.com/ZeroXNoxus/zetas-module-suite/releases/download/0.0.8/module.zip",
     "readme": "https://github.com/ZeroXNoxus/zetas-module-suite/blob/0.0.1/README.md",
     "bugs": "https://github.com/ZeroXNoxus/zetas-module-suite/issues",
     "changelog": "https://github.com/ZeroXNoxus/zetas-module-suite/releases"
