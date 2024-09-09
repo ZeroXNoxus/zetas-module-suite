@@ -20,7 +20,7 @@ function betterItemEvents(sheet){
 /*********************************** Function Declaration: END ***********************************/
 
 /************************************* Hook Declaration: STAR ************************************/
-Hooks.once('init', () => {    
+Hooks.once('canvasReady', () => {    
     initialization();
 });
 
@@ -29,7 +29,7 @@ function initialization(){
     initRolltypeButtons();
     initSettings();
     initMobileSheet();
-    
+
     Hooks.on('renderActorSheet5eCharacter2', (app, html, data) => {
         betterItemEvents(html); 
     });
