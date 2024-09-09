@@ -7,7 +7,7 @@
       "name": "ZeroXNoxus"
       }
       ],
-    "version": "0.1.2",
+    "version": "0.1.3",
     "compatibility": {
       "minimum": "12",
       "verified": "12",
@@ -16,6 +16,7 @@
     "type": "module",
     "scripts": [
       "/script/modules/dragover-filepicker.js",
+      "/script/modules/mobile-sheet.js",
       "/script/modules/rolltype-buttons.js",
       "/script/modules/settings.js",
       "/script/modules/smaller-chat.js",
@@ -26,6 +27,7 @@
       "/css/dark-mode.css",
       "/css/dir-changes.css",
       "/css/dragover-filepicker.css",
+      "/css/mobile-sheet.css",
       "/css/smaller-chat.css",
       "/css/rolltype-buttons.css",
       "/css/module-support.css"
@@ -49,9 +51,9 @@
         }
       }]
     },
-    "manifest": "https://github.com/ZeroXNoxus/zetas-module-suite/releases/download/0.1.2/module.json",
+    "manifest": "https://github.com/ZeroXNoxus/zetas-module-suite/releases/download/0.1.3/module.json",
     "url": "https://github.com/ZeroXNoxus/zetas-module-suite",
-    "download": "https://github.com/ZeroXNoxus/zetas-module-suite/releases/download/0.1.2/module.zip",
+    "download": "https://github.com/ZeroXNoxus/zetas-module-suite/releases/download/0.1.3/module.zip",
     "readme": "https://github.com/ZeroXNoxus/zetas-module-suite/blob/0.0.1/README.md",
     "bugs": "https://github.com/ZeroXNoxus/zetas-module-suite/issues",
     "changelog": "https://github.com/ZeroXNoxus/zetas-module-suite/releases"
