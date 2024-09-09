@@ -25,14 +25,11 @@ Hooks.once('init', () => {
 });
 
 function initialization(){
-    for(let i = 0; i<funcNames.length; i++){
-        try {
-            funcNames[i]();
-        } catch(err) {
-            console.warn(err);
-        }
-    }
-
+    initDragoverFilepicker();
+    initRolltypeButtons();
+    initSettings();
+    initMobileSheet();
+    
     Hooks.on('renderActorSheet5eCharacter2', (app, html, data) => {
         betterItemEvents(html); 
     });
