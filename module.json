@@ -7,7 +7,7 @@
       "name": "ZetaDracon"
       }
       ],
-    "version": "0.3.2",
+    "version": "0.3.3",
     "compatibility": {
       "minimum": "11",
       "verified": "12",
@@ -51,9 +51,9 @@
         }
       }]
     },
-    "manifest": "https://github.com/ZeroXNoxus/zetas-module-suite/releases/download/0.3.2/module.json",
+    "manifest": "https://github.com/ZeroXNoxus/zetas-module-suite/releases/download/0.3.3/module.json",
     "url": "https://github.com/ZeroXNoxus/zetas-module-suite",
-    "download": "https://github.com/ZeroXNoxus/zetas-module-suite/releases/download/0.3.2/module.zip",
+    "download": "https://github.com/ZeroXNoxus/zetas-module-suite/releases/download/0.3.3/module.zip",
     "readme": "https://github.com/ZeroXNoxus/zetas-module-suite/blob/0.0.1/README.md",
     "bugs": "https://github.com/ZeroXNoxus/zetas-module-suite/issues",
     "changelog": "https://github.com/ZeroXNoxus/zetas-module-suite/releases"
