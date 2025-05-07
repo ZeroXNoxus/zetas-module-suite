@@ -4,10 +4,10 @@
     "description": "A simple collection of Zeta's Modules.",
     "authors": [
       {
-      "name": "ZeroXNoxus"
+      "name": "ZetaDracon"
       }
       ],
-    "version": "0.2.3",
+    "version": "0.3.0",
     "compatibility": {
       "minimum": "11",
       "verified": "12",
@@ -47,7 +47,7 @@
         "compatibility": {
           "minimum": "3.0.0",
           "verified": "4.0.3",
-          "maximum": "4.0.999999"
+          "maximum": "4.9.9"
         }
       }]
     },
